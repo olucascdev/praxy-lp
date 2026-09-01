@@ -460,8 +460,8 @@ svg {
 
 .manifesto-logo {
   justify-content: center;
-  width: min(260px, 66vw);
-  margin: 0 auto 30px;
+  width: clamp(112px, 10vw, 148px);
+  margin: 0 auto clamp(18px, 2vw, 24px);
   display: flex;
 }
 
@@ -475,6 +475,7 @@ svg {
   max-width: 980px;
   font: 400 var(--type-section)/1.03 var(--font-display);
   letter-spacing: -.03em;
+  text-wrap: balance;
   margin: 0 auto;
   position: relative;
 }
@@ -1542,6 +1543,24 @@ svg {
 
   .lg b {
     font-size: var(--type-footer);
+  }
+}
+
+@media (max-width: 599px) {
+  .manifesto-frame {
+    padding-block: 52px;
+  }
+
+  .manifesto-logo {
+    width: min(132px, 38vw);
+    margin-bottom: 20px;
+  }
+
+  .manifesto-copy {
+    letter-spacing: -.025em;
+    max-width: 34ch;
+    font-size: clamp(18px, 5.2vw, 25px);
+    line-height: 1.1;
   }
 }
 
