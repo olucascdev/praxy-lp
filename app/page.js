@@ -70,13 +70,13 @@ const icons = {
 
 function ProductTile({ title, copy, icon, className = "" }) {
   return (
-    <article className={`product-tile ${className}`} role="listitem">
+    <div className={`product-tile ${className}`} role="listitem">
       <div className="product-art">{icons[icon]}</div>
       <div className="product-copy">
         <h3>{title}</h3>
         <p>{copy}</p>
       </div>
-    </article>
+    </div>
   );
 }
 
