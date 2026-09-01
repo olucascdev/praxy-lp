@@ -60,24 +60,67 @@ function Accent({ children }) {
   return <em className="text-accent">{children}</em>;
 }
 
-const icons = {
-  agents: <svg viewBox="0 0 120 72" aria-hidden="true"><rect x="17" y="20" width="86" height="34" rx="13"/><path d="M38 20v-7m44 7v-7M35 37h13m24 0h13M52 48h16"/></svg>,
-  automation: <svg viewBox="0 0 120 72" aria-hidden="true"><path d="M23 37h18l8-14 22 29 8-15h18"/><circle cx="23" cy="37" r="6"/><circle cx="97" cy="37" r="6"/></svg>,
-  systems: <svg viewBox="0 0 120 72" aria-hidden="true"><rect x="18" y="17" width="35" height="22" rx="4"/><rect x="67" y="17" width="35" height="22" rx="4"/><rect x="43" y="47" width="35" height="16" rx="4"/><path d="M53 28h14M60 39v8"/></svg>,
-  websites: <svg viewBox="0 0 120 72" aria-hidden="true"><rect x="17" y="14" width="86" height="48" rx="5"/><path d="M17 27h86M29 20h1M38 20h1M29 43h24M29 52h38M73 43h20M73 52h14"/></svg>,
-  data: <svg viewBox="0 0 120 72" aria-hidden="true"><path d="M22 56V18m0 38h78"/><path d="M35 45l14-13 13 8 22-25"/><circle cx="35" cy="45" r="4"/><circle cx="49" cy="32" r="4"/><circle cx="62" cy="40" r="4"/><circle cx="84" cy="15" r="4"/></svg>,
-};
+const services = [
+  { id: "agents", title: "Agentes de IA", copy: "Atendem no WhatsApp e Instagram, qualificam clientes e encaminham quem está pronto para avançar.", flow: ["Mensagem", "Entendimento", "Próximo passo"] },
+  { id: "automation", title: "Automação de processos", copy: "Tiram da equipe tarefas repetitivas como copiar dados, atualizar sistemas e enviar avisos.", flow: ["Entrada", "Fluxo", "Atualização"] },
+  { id: "systems", title: "Sistemas sob medida", copy: "Quando uma ferramenta pronta não resolve, construímos o software de acordo com o seu processo.", flow: ["Operação", "Sistema", "Controle"] },
+  { id: "websites", title: "Criação de sites com GEO, SEO e AEO", copy: "Estruturamos páginas para performance, busca tradicional, respostas de IA e descoberta em mecanismos generativos.", flow: ["Busca", "Página", "Descoberta"] },
+  { id: "data", title: "Dados e inteligência", copy: "Reúne o que hoje está espalhado e transforma em indicadores que ajudam você a decidir.", flow: ["Fontes", "Leitura", "Decisão"] },
+];
 
-function ProductTile({ title, copy, icon, className = "" }) {
+function ProductTile({ service, onOpen }) {
   return (
-    <div className={`product-tile ${className}`} role="listitem">
-      <div className="product-art">{icons[icon]}</div>
+    <div className="product-tile" role="listitem">
       <div className="product-copy">
-        <h3>{title}</h3>
-        <p>{copy}</p>
+        <h3>{service.title}</h3>
+        <p>{service.copy}</p>
       </div>
+      <button className="product-open" type="button" onClick={() => onOpen(service)} aria-label={`Ver exemplo de ${service.title}`}><Arrow /></button>
     </div>
   );
+}
+
+function ServiceDemo({ service }) {
+  if (service.id === "agents") return <div className="service-demo demo-whatsapp" aria-label="Conversa de WhatsApp sendo atendida">
+    <div className="chat-head"><span>◉</span><b>Praxy atendimento</b><small>online</small></div>
+    <p className="chat-bubble incoming">Oi, queria saber mais sobre os serviços.</p>
+    <p className="chat-bubble outgoing">Claro. Qual ponto hoje mais toma tempo da sua equipe?</p>
+    <p className="chat-bubble incoming last">Atendimento e organização dos pedidos.</p>
+    <span className="chat-typing">digitando<span>.</span><span>.</span><span>.</span></span>
+  </div>;
+  if (service.id === "automation") return <div className="service-demo demo-n8n" aria-label="Fluxo de automação entre sistemas">
+    <div className="n8n-node trigger"><b>Quando chega</b><small>Novo pedido</small></div><i className="n8n-link link-one" />
+    <div className="n8n-node process"><b>Organizar</b><small>Dados do pedido</small></div><i className="n8n-link link-two" />
+    <div className="n8n-node finish"><b>Atualizar</b><small>Sistema e equipe</small></div>
+  </div>;
+  if (service.id === "systems") return <div className="service-demo demo-system" aria-label="Sistema organizando uma operação">
+    <div className="system-side"><i/><i/><i/></div><div className="system-content"><span>OPERAÇÃO EM TEMPO REAL</span><div className="system-bars"><i/><i/><i/><i/><i/></div><div className="system-row"><b>Pedidos</b><em>24</em></div><div className="system-row"><b>Em andamento</b><em>08</em></div></div>
+  </div>;
+  if (service.id === "websites") return <div className="service-demo demo-web" aria-label="Jornada de descoberta de um site">
+    <div className="search-query"><span>⌕</span> solução para minha operação <b>↵</b></div><div className="search-result"><i/><span/><span/></div><div className="web-page"><header><i/><i/><i/></header><b>Sua operação pode render mais.</b><p>Clareza para encontrar, entender e agir.</p><span>Começar</span></div>
+  </div>;
+  return <div className="service-demo demo-data" aria-label="Dados se transformando em indicadores">
+    <div className="data-source"><span>CRM</span><span>ERP</span><span>ATD</span></div><i className="data-stream"/><div className="data-board"><small>VISÃO DA OPERAÇÃO</small><div className="data-bars"><i/><i/><i/><i/><i/></div><b>+32%</b><span>mais clareza para decidir</span></div>
+  </div>;
+}
+
+function ServiceModal({ service, onClose }) {
+  const closeRef = useRef(null);
+  useEffect(() => {
+    const onKeyDown = (event) => event.key === "Escape" && onClose();
+    document.addEventListener("keydown", onKeyDown);
+    document.body.style.overflow = "hidden";
+    requestAnimationFrame(() => closeRef.current?.focus());
+    return () => { document.removeEventListener("keydown", onKeyDown); document.body.style.overflow = ""; };
+  }, [onClose]);
+
+  return <div className="service-modal-backdrop" role="presentation" onMouseDown={(event) => event.target === event.currentTarget && onClose()}>
+    <section className={`service-modal demo-${service.id}`} role="dialog" aria-modal="true" aria-labelledby="service-modal-title">
+      <button ref={closeRef} className="service-modal-close" type="button" onClick={onClose} aria-label="Fechar exemplo">×</button>
+      <div className="service-modal-copy"><p className="service-modal-kicker">Exemplo em movimento</p><h3 id="service-modal-title">{service.title}</h3><p>{service.copy}</p></div>
+      <ServiceDemo service={service} />
+    </section>
+  </div>;
 }
 
 function Header({ open, setOpen, burgerRef, menuRef }) {
@@ -147,16 +190,14 @@ function Manifesto() {
 }
 
 function Products() {
+  const [activeService, setActiveService] = useState(null);
   return (
     <section className="products section" id="solucoes">
       <div className="section-head"><h2>Você já tem os processos. Falta <Accent>automatizar</Accent> o que ainda depende do manual.</h2><p>Aplicamos tecnologia nos pontos que mais pesam no dia a dia. Atendimento, tarefas repetitivas, sistemas desconectados e dados sem visibilidade.</p></div>
       <div className="product-rail" role="list" aria-label="Soluções para processos da empresa">
-        <ProductTile title="Agentes de IA" copy="Atendem no WhatsApp e Instagram, qualificam clientes e encaminham quem está pronto para avançar." icon="agents"/>
-        <ProductTile title="Automação de processos" copy="Tiram da equipe tarefas repetitivas como copiar dados, atualizar sistemas e enviar avisos." icon="automation"/>
-        <ProductTile title="Sistemas sob medida" copy="Quando uma ferramenta pronta não resolve, construímos o software de acordo com o seu processo." icon="systems"/>
-        <ProductTile title="Criação de sites com GEO, SEO e AEO" copy="Estruturamos páginas para performance, busca tradicional, respostas de IA e descoberta em mecanismos generativos." icon="websites"/>
-        <ProductTile title="Dados e inteligência" copy="Reúne o que hoje está espalhado e transforma em indicadores que ajudam você a decidir." icon="data"/>
+        {services.map((service) => <ProductTile key={service.id} service={service} onOpen={setActiveService}/>) }
       </div>
+      {activeService && <ServiceModal service={activeService} onClose={() => setActiveService(null)} />}
     </section>
   );
 }
