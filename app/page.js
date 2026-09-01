@@ -117,7 +117,7 @@ function ServiceModal({ service, onClose }) {
   return <div className="service-modal-backdrop" role="presentation" onMouseDown={(event) => event.target === event.currentTarget && onClose()}>
     <section className={`service-modal demo-${service.id}`} role="dialog" aria-modal="true" aria-labelledby="service-modal-title">
       <button ref={closeRef} className="service-modal-close" type="button" onClick={onClose} aria-label="Fechar exemplo">×</button>
-      <div className="service-modal-copy"><p className="service-modal-kicker">Exemplo em movimento</p><h3 id="service-modal-title">{service.title}</h3><p>{service.copy}</p></div>
+      <div className="service-modal-copy"><h3 id="service-modal-title">{service.title}</h3><p>{service.copy}</p></div>
       <ServiceDemo service={service} />
     </section>
   </div>;
