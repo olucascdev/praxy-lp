@@ -19,7 +19,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 ;
 ;
 ;
-const VIDEO = "https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260808_112712_da9d53df-6d27-4b12-bdf6-aa9dc2622bdf.mp4";
+const HERO_VIDEO = "/Hero-background.mp4";
 const WHATSAPP_NUMBER = "27996693332";
 const WHATSAPP_URL = `https://wa.me/55${WHATSAPP_NUMBER}`;
 const CONTACT_EMAIL = "contato@praxy.com.br";
@@ -1283,7 +1283,7 @@ function Hero() {
                     preload: "auto",
                     "aria-hidden": "true",
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("source", {
-                        src: VIDEO,
+                        src: HERO_VIDEO,
                         type: "video/mp4"
                     }, void 0, false, {
                         fileName: "[project]/app/page.js",
