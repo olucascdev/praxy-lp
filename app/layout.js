@@ -5,10 +5,10 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.praxy.com.br";
 export const metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Praxy | Automação e agentes de IA para sua operação",
+    default: "Praxy | Mais tempo para sua empresa gerar valor",
     template: "%s | Praxy",
   },
-  description: "A Praxy identifica gargalos operacionais e constrói agentes de IA, automações, sistemas e sites para sua empresa operar melhor.",
+  description: "A Praxy identifica os gargalos que travam sua operação e transforma tempo perdido em clareza, velocidade e resultado.",
   applicationName: "Praxy",
   authors: [{ name: "Praxy" }],
   creator: "Praxy",
@@ -31,13 +31,13 @@ export const metadata = {
     locale: "pt_BR",
     url: siteUrl,
     siteName: "Praxy",
-    title: "Praxy | Automação e agentes de IA para sua operação",
-    description: "Identifique gargalos operacionais e construa agentes de IA, automações e sistemas para sua empresa operar melhor.",
+    title: "Praxy | Mais tempo para sua empresa gerar valor",
+    description: "Identifique os gargalos que travam sua operação e transforme tempo perdido em clareza, velocidade e resultado.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Praxy | Automação e agentes de IA para sua operação",
-    description: "Identifique gargalos operacionais e construa agentes de IA, automações e sistemas para sua empresa operar melhor.",
+    title: "Praxy | Mais tempo para sua empresa gerar valor",
+    description: "Identifique os gargalos que travam sua operação e transforme tempo perdido em clareza, velocidade e resultado.",
   },
 };
 
@@ -59,14 +59,14 @@ export default function RootLayout({ children }) {
         name: "Praxy",
         url: siteUrl,
         logo: `${siteUrl}/praxy-logo-commpleta-navbar.svg`,
-        description: "Agentes de IA, automações, sistemas e sites para operações empresariais.",
+        description: "Tecnologia para reduzir atritos na operação e criar mais tempo para gerar valor.",
       },
       {
         "@type": "WebSite",
         "@id": `${siteUrl}/#website`,
         name: "Praxy",
         url: siteUrl,
-        description: "Automação e agentes de IA para sua operação.",
+        description: "Mais tempo para sua empresa gerar valor.",
         inLanguage: "pt-BR",
         publisher: { "@id": `${siteUrl}/#organization` },
       },
