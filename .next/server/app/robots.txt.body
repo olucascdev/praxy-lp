@@ -1,0 +1,9 @@
+User-Agent: *
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+
+User-Agent: Bytespider
+Disallow: /
+
+Sitemap: https://www.praxy.com.br/sitemap.xml

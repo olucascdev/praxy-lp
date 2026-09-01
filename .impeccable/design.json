@@ -1,0 +1,170 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-31T01:58:23Z",
+  "title": "Design System: Praxy — The Next Layer of Intelligence",
+  "extensions": {
+    "colorMeta": {
+      "space-black": {
+        "role": "neutral",
+        "displayName": "Space Black",
+        "canonical": "#050505",
+        "tonalRamp": ["#050505", "#161616", "#292929", "#424242", "#636363", "#898989", "#b8b8b8", "#f2f2f2"]
+      },
+      "silver-ink": {
+        "role": "neutral",
+        "displayName": "Silver Ink",
+        "canonical": "#fafafa",
+        "tonalRamp": ["#242424", "#3a3a3a", "#555555", "#747474", "#969696", "#b8b8b8", "#dadada", "#fafafa"]
+      },
+      "operational-acid": {
+        "role": "primary",
+        "displayName": "Operational Acid",
+        "canonical": "#ffff3c",
+        "tonalRamp": ["#282800", "#444400", "#626200", "#858500", "#aaaa00", "#d0d000", "#eeee1e", "#ffffb0"]
+      },
+      "muted-silver": {
+        "role": "neutral",
+        "displayName": "Muted Silver",
+        "canonical": "#a7a6a6",
+        "tonalRamp": ["#242323", "#383737", "#504f4f", "#696868", "#838282", "#a7a6a6", "#cbcaca", "#efeeee"]
+      },
+      "navigation-silver": {
+        "role": "neutral",
+        "displayName": "Navigation Silver",
+        "canonical": "#b6b5b5",
+        "tonalRamp": ["#252424", "#3a3939", "#525151", "#6c6b6b", "#8b8a8a", "#b6b5b5", "#d7d6d6", "#f3f2f2"]
+      },
+      "partner-graphite": {
+        "role": "neutral",
+        "displayName": "Partner Graphite",
+        "canonical": "#8b8a8a",
+        "tonalRamp": ["#212020", "#343333", "#494848", "#605f5f", "#777676", "#8b8a8a", "#b9b8b8", "#e8e7e7"]
+      },
+      "white-control": {
+        "role": "neutral",
+        "displayName": "White Control",
+        "canonical": "#ffffff",
+        "tonalRamp": ["#262626", "#3d3d3d", "#575757", "#767676", "#989898", "#bcbcbc", "#dedede", "#ffffff"]
+      },
+      "carbon-surface": {
+        "role": "neutral",
+        "displayName": "Carbon Surface",
+        "canonical": "#151515",
+        "tonalRamp": ["#151515", "#252525", "#373737", "#4d4d4d", "#686868", "#888888", "#b5b5b5", "#ededed"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "System Display", "purpose": "Section headlines and manifesto statements." },
+      "hero": { "displayName": "Portal Thesis", "purpose": "The first-viewport thesis and its actions." },
+      "title": { "displayName": "Operational Title", "purpose": "Product, protocol, and metric titles." },
+      "body": { "displayName": "Operational Body", "purpose": "Explanations, supporting copy, and descriptions." },
+      "detail": { "displayName": "Human Detail", "purpose": "Sparse italic emphasis inside the manifesto." },
+      "label": { "displayName": "System Label", "purpose": "Instructions, captions, proof labels, and footer copy." }
+    },
+    "shadows": [
+      { "name": "booking-ambient", "value": "0 24px 80px rgba(0,0,0,.28)", "purpose": "Separates the embedded booking surface from the black field." },
+      { "name": "data-lines", "value": "0 18px #383838, 0 36px #ffff3c, 0 54px #383838, 0 72px #383838", "purpose": "Builds the repeated operational-line graphic inside a metric card." }
+    ],
+    "motion": [
+      { "name": "ease-operational", "value": "cubic-bezier(.22,1,.36,1)", "purpose": "Hero rise, mobile-menu rows, and protocol activation." },
+      { "name": "state-fast", "value": "250ms", "purpose": "Primary pill lift and color change." },
+      { "name": "menu-reveal", "value": "420ms", "purpose": "Full-screen navigation visibility transition." },
+      { "name": "hero-rise", "value": "900ms", "purpose": "Initial thesis and action entrance when reduced motion is not requested." },
+      { "name": "protocol-activate", "value": "1150ms", "purpose": "Perspective ring-stack activation on intersection." }
+    ],
+    "breakpoints": [
+      { "name": "compact-narrow", "value": "380px", "purpose": "Tightens the hero and partner labels on very narrow screens." },
+      { "name": "portrait-expanded", "value": "600px with max-aspect-ratio 11/10", "purpose": "Introduces four partner columns and two-column proof layouts." },
+      { "name": "wide-landscape", "value": "min-aspect-ratio 11/10", "purpose": "Activates the calibrated desktop portal composition and desktop navigation." }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Pill",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The principal portal and booking action; white at rest and acid on hover.",
+      "html": "<a class=\"ds-pill\" href=\"#\">Começar</a>",
+      "css": ".ds-pill { display:inline-flex; align-items:center; justify-content:center; min-height:50px; padding:0 26px; border-radius:999px; background:var(--pill, #fff); color:var(--pill-ink, #050505); font:500 16px 'Manrope', sans-serif; text-decoration:none; transition:transform .25s, background .25s; } .ds-pill:hover { transform:translateY(-2px); background:var(--acid, #ffff3c); } .ds-pill:focus-visible { outline:2px solid var(--acid, #ffff3c); outline-offset:5px; }"
+    },
+    {
+      "name": "Ghost Architecture Link",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "The quieter paired action that points visitors toward system architecture.",
+      "html": "<a class=\"ds-ghost\" href=\"#\">Ver arquitetura</a>",
+      "css": ".ds-ghost { display:inline-flex; align-items:center; min-height:48px; color:var(--ink, #fafafa); font:500 15px 'Manrope', sans-serif; text-decoration:none; } .ds-ghost::after { content:'↗'; margin-left:9px; color:var(--acid, #ffff3c); } .ds-ghost:hover { color:#fff; } .ds-ghost:focus-visible { outline:2px solid var(--acid, #ffff3c); outline-offset:5px; border-radius:4px; }"
+    },
+    {
+      "name": "Directional Rail Control",
+      "kind": "button",
+      "description": "Circular next/previous control for the horizontally snapping department rail.",
+      "html": "<button class=\"ds-rail-control\" aria-label=\"Próxima solução\"><svg viewBox=\"0 0 20 20\" aria-hidden=\"true\"><path d=\"M4 10h11M11 6l4 4-4 4\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></button>",
+      "css": ".ds-rail-control { width:42px; height:42px; display:grid; place-items:center; border:1px solid #4b4b4b; border-radius:50%; background:#0b0b0b; color:#fff; cursor:pointer; } .ds-rail-control svg { width:17px; } .ds-rail-control:hover { border-color:var(--acid, #ffff3c); color:var(--acid, #ffff3c); } .ds-rail-control:focus-visible { outline:2px solid var(--acid, #ffff3c); outline-offset:5px; }"
+    },
+    {
+      "name": "Product Tile",
+      "kind": "card",
+      "refersTo": "card-product",
+      "description": "A restrained-glass department card with a dark art well and compact directional affordance.",
+      "html": "<article class=\"ds-product\"><div class=\"ds-product-art\"><svg viewBox=\"0 0 120 72\" aria-hidden=\"true\"><path d=\"M19 52h24V30H19m24 12h18l9-25h30v35H61\"/><circle cx=\"83\" cy=\"35\" r=\"14\"/><path d=\"M83 28v14m-5-4h10\"/></svg></div><h3>Marketing</h3><p>Transforme sinais dispersos em conversas que geram demanda.</p><span class=\"ds-product-arrow\">→</span></article>",
+      "css": ".ds-product { position:relative; width:354px; min-height:340px; padding:18px; overflow:hidden; border:1px solid rgba(255,255,255,.12); border-radius:var(--radius, 14px); background:rgba(255,255,255,.035); color:var(--ink, #fafafa); backdrop-filter:blur(18px); } .ds-product-art { height:190px; display:grid; place-items:center; border-radius:10px; background:#0a0a0a; } .ds-product-art svg { width:70%; fill:none; stroke:#7a7979; stroke-width:2; } .ds-product h3 { margin:20px 0 8px; font:500 24px 'Fira Sans', sans-serif; } .ds-product p { max-width:36ch; margin:0; color:var(--muted, #a7a6a6); font:400 13px/1.55 'Inter', sans-serif; } .ds-product-arrow { position:absolute; right:18px; bottom:18px; width:28px; height:28px; display:grid; place-items:center; border:1px solid #444; border-radius:50%; color:#888; }"
+    },
+    {
+      "name": "Mobile Menu Link",
+      "kind": "nav",
+      "description": "Large compact-navigation row with a fine divider and acid outbound marker.",
+      "html": "<nav class=\"ds-menu\"><a href=\"#\">Protocolo</a></nav>",
+      "css": ".ds-menu { width:320px; padding:24px; background:linear-gradient(145deg, rgba(5,5,5,.96), rgba(12,12,12,.9)); color:var(--ink, #fafafa); backdrop-filter:blur(24px); } .ds-menu a { display:flex; align-items:center; justify-content:space-between; padding:14px 0; border-bottom:1px solid rgba(255,255,255,.12); color:inherit; font:400 max(31px,8vw)/1 'Fira Sans', sans-serif; text-decoration:none; } .ds-menu a::after { content:'↗'; color:var(--acid, #ffff3c); font-size:.55em; } .ds-menu a:focus-visible { outline:2px solid var(--acid, #ffff3c); outline-offset:5px; }"
+    },
+    {
+      "name": "Protocol Access Label",
+      "kind": "custom",
+      "description": "A slightly rotated light label that pins privileged access over the protocol core.",
+      "html": "<div class=\"ds-core-label\">Acesso<br>Privilegiado</div>",
+      "css": ".ds-core-label { width:132px; padding:10px; transform:rotate(2deg); border:1px solid #555; background:#eee; color:#050505; text-align:center; font:600 11px/1.25 'Inter', sans-serif; }"
+    },
+    {
+      "name": "Acid Metric",
+      "kind": "card",
+      "refersTo": "card-metric",
+      "description": "The highest-energy proof plane, pairing an acid field with an oversized operational number.",
+      "html": "<article class=\"ds-metric\"><small>Velocidade de ativação</small><strong>2×</strong><p>Fluxos prontos para aprender desde o primeiro ciclo.</p></article>",
+      "css": ".ds-metric { width:420px; min-height:220px; display:flex; flex-direction:column; justify-content:space-between; padding:22px; overflow:hidden; border-radius:12px; background:var(--acid, #ffff3c); color:#151515; } .ds-metric small { font:400 12px 'Inter', sans-serif; } .ds-metric strong { font:500 clamp(68px, 20vw, 116px)/.85 'Fira Sans', sans-serif; letter-spacing:-.06em; } .ds-metric p { margin:0; color:#4d4d15; font:400 12px/1.45 'Inter', sans-serif; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Operational Portal",
+    "overview": "Praxy is a passage from intent to operation. Its world is cinematic rather than dashboard-like: black-space planes hold a full-bleed portal, silver typography establishes intelligence and restraint, and acid-yellow signals mark the moments where the system becomes active.\n\nThe interface moves from atmosphere to evidence with controlled density. Sharp technical diagrams, narrow dividers, restrained glass, and high-contrast controls make advanced infrastructure feel legible without flattening it into generic software chrome. The bolt mark and operational signal color recur as small anchors rather than decorative wallpaper.",
+    "keyCharacteristics": [
+      "Full-bleed portal media dissolving into black space.",
+      "Silver-led typography with rare acid-yellow operational signals.",
+      "Sharp diagrams and fine-line structures inside gently curved surfaces.",
+      "Restrained glass reserved for navigation and product containers.",
+      "Responsive composition governed by viewport shape as well as width."
+    ],
+    "rules": [
+      { "name": "The Signal Rarity Rule", "body": "Operational Acid identifies action, focus, or live system state; it does not become a general-purpose background palette.", "section": "colors" },
+      { "name": "The Black-Space Rule", "body": "Major sections remain continuous with Space Black so portal media, diagrams, and proof surfaces appear to emerge from one operational field.", "section": "colors" },
+      { "name": "The Four-Voice Rule", "body": "Manrope opens the portal, Fira Sans articulates the system, Inter explains it, and Lora humanizes only a few manifesto phrases.", "section": "typography" },
+      { "name": "The Tight-Thesis Rule", "body": "Large statements use compact line-height and negative tracking; body copy stays open and neutral.", "section": "typography" },
+      { "name": "The Portal-First Rule", "body": "The first viewport remains a media plane with navigation, a two-line thesis, one supporting statement, one CTA pair, and partner marks—no cards, stats, or secondary marketing blocks.", "section": "layout" },
+      { "name": "The Restrained-Glass Rule", "body": "Blur supports floating controls and product containers; primary content planes remain materially direct.", "section": "elevation" },
+      { "name": "The Sharp-Inside-Soft Rule", "body": "Curved containers may hold sharp signals and diagrams; do not round the operational graphics into friendly blobs.", "section": "shapes" }
+    ],
+    "dos": [
+      "Do preserve a continuous Space Black field and let media or content dissolve back into it.",
+      "Do reserve Operational Acid for action, focus, live pathways, and high-signal proof.",
+      "Do pair tight large type with open, neutral explanatory copy.",
+      "Do respond to viewport shape: compact portrait, tablet-like portrait, and wide landscape are distinct compositions.",
+      "Do remove autoplay media and collapse transitions when reduced motion is requested."
+    ],
+    "donts": [
+      "Don't replace the portal with a generic dashboard hero or introduce cards and stats into the first viewport.",
+      "Don't spread acid across decorative backgrounds until it stops behaving like a signal.",
+      "Don't apply glass blur to every dark surface; the restraint is part of the hierarchy.",
+      "Don't soften the bolt, protocol rings, scanner, or data graphics into generic rounded illustration.",
+      "Don't present illustrative outcomes as verified commercial proof."
+    ]
+  }
+}

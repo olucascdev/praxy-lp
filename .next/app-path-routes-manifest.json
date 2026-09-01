@@ -1,0 +1,14 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/faq/page": "/faq",
+  "/favicon.ico/route": "/favicon.ico",
+  "/llms.txt/route": "/llms.txt",
+  "/manifest.webmanifest/route": "/manifest.webmanifest",
+  "/opengraph-image/route": "/opengraph-image",
+  "/page": "/",
+  "/politica-de-privacidade/page": "/politica-de-privacidade",
+  "/robots.txt/route": "/robots.txt",
+  "/sitemap.xml/route": "/sitemap.xml",
+  "/termos-de-uso/page": "/termos-de-uso"
+}
