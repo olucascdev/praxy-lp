@@ -3,6 +3,7 @@
   "/_not-found/page": "app/_not-found/page.js",
   "/faq/page": "app/faq/page.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/links/page": "app/links/page.js",
   "/llms.txt/route": "app/llms.txt/route.js",
   "/manifest.webmanifest/route": "app/manifest.webmanifest/route.js",
   "/opengraph-image/route": "app/opengraph-image/route.js",

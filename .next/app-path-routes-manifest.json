@@ -3,6 +3,7 @@
   "/_not-found/page": "/_not-found",
   "/faq/page": "/faq",
   "/favicon.ico/route": "/favicon.ico",
+  "/links/page": "/links",
   "/llms.txt/route": "/llms.txt",
   "/manifest.webmanifest/route": "/manifest.webmanifest",
   "/opengraph-image/route": "/opengraph-image",

@@ -54,6 +54,12 @@
       "namedRegex": "^/favicon\\.ico(?:/)?$"
     },
     {
+      "page": "/links",
+      "regex": "^/links(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/links(?:/)?$"
+    },
+    {
       "page": "/llms.txt",
       "regex": "^/llms\\.txt(?:/)?$",
       "routeKeys": {},

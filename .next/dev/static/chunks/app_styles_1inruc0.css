@@ -2569,4 +2569,153 @@ svg {
   }
 }
 
+.links-page {
+  background: radial-gradient(circle at 50% -12%,#ffff3c24,transparent 31%),var(--space);
+  min-height: 100svh;
+  color: var(--ink);
+  place-items: center;
+  padding: 24px;
+  display: grid;
+}
+
+.links-shell {
+  flex-direction: column;
+  align-items: stretch;
+  width: min(100%, 430px);
+  min-height: min(720px, 100svh - 48px);
+  padding: clamp(28px, 8vw, 44px) 0;
+  display: flex;
+}
+
+.links-brand {
+  justify-content: center;
+  width: 126px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.links-brand img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.links-intro {
+  text-align: center;
+  margin: clamp(42px, 11svh, 82px) 0 34px;
+}
+
+.links-intro h1 {
+  max-width: 15ch;
+  font: 400 clamp(30px,8vw,38px)/1.02 var(--font-display);
+  letter-spacing: -.035em;
+  text-wrap: balance;
+  margin: 0 auto;
+}
+
+.links-intro p {
+  max-width: 30ch;
+  color: var(--muted);
+  margin: 14px auto 0;
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.links-list {
+  gap: 12px;
+  display: grid;
+}
+
+.links-item {
+  min-height: 72px;
+  color: var(--ink);
+  background: #ffffff0b;
+  border: 1px solid #ffffff2b;
+  border-radius: 999px;
+  grid-template-columns: 44px minmax(0, 1fr) 32px;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 17px 10px 13px;
+  transition: transform .22s, background .22s, border-color .22s;
+  display: grid;
+}
+
+.links-item:hover {
+  border-color: var(--acid);
+  background: #ffff3c1a;
+  transform: translateY(-2px);
+}
+
+.links-item:focus-visible {
+  outline: 2px solid var(--acid);
+  outline-offset: 4px;
+}
+
+.links-icon {
+  background: var(--acid);
+  color: #050505;
+  border-radius: 50%;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  display: grid;
+  overflow: hidden;
+}
+
+.links-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.links-praxy-mark {
+  flex: none;
+  width: 158px;
+  max-width: none;
+  height: auto;
+  display: block;
+}
+
+.links-copy {
+  gap: 3px;
+  display: grid;
+}
+
+.links-copy b {
+  font: 500 16px/1.1 var(--font-action);
+}
+
+.links-copy small {
+  color: var(--muted);
+  font: 12px/1.1 var(--font-body);
+}
+
+.links-item > svg {
+  width: 18px;
+  height: 18px;
+  color: var(--acid);
+  justify-self: end;
+}
+
+@media (min-width: 700px) {
+  .links-page {
+    padding: 48px;
+  }
+
+  .links-shell {
+    min-height: 670px;
+  }
+
+  .links-brand {
+    width: 142px;
+  }
+
+  .links-intro {
+    margin-top: 82px;
+  }
+
+  .links-item {
+    min-height: 76px;
+  }
+}
+
 /*# sourceMappingURL=app_styles_1inruc0.css.map*/
