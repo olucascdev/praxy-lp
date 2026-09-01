@@ -1280,7 +1280,8 @@ function Hero() {
                     muted: true,
                     loop: true,
                     playsInline: true,
-                    preload: "auto",
+                    preload: "metadata",
+                    poster: "/hero-poster.webp",
                     "aria-hidden": "true",
                     children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("source", {
                         src: HERO_VIDEO,
@@ -1288,7 +1289,7 @@ function Hero() {
                     }, void 0, false, {
                         fileName: "[project]/app/page.js",
                         lineNumber: 170,
-                        columnNumber: 127
+                        columnNumber: 158
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/app/page.js",

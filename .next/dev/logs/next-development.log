@@ -1,6 +1,5 @@
-{"timestamp":"00:00:00.433","source":"Server","level":"LOG","message":""}
-{"timestamp":"00:00:01.013","source":"Browser","level":"INFO","message":"Download the React DevTools for a better development experience: https://react.dev/link/react-devtools"}
-{"timestamp":"00:00:02.159","source":"Browser","level":"INFO","message":"Download the React DevTools for a better development experience: https://react.dev/link/react-devtools"}
-{"timestamp":"00:00:03.051","source":"Browser","level":"INFO","message":"Download the React DevTools for a better development experience: https://react.dev/link/react-devtools"}
-{"timestamp":"00:02:15.280","source":"Server","level":"LOG","message":"✓ Compiled in 33ms"}
-{"timestamp":"00:02:33.690","source":"Browser","level":"INFO","message":"Download the React DevTools for a better development experience: https://react.dev/link/react-devtools"}
+{"timestamp":"00:00:00.621","source":"Server","level":"LOG","message":"- Experiments (use with caution):"}
+{"timestamp":"00:00:00.622","source":"Server","level":"LOG","message":"  ✓ inlineCss"}
+{"timestamp":"00:00:00.622","source":"Server","level":"LOG","message":""}
+{"timestamp":"00:00:02.196","source":"Browser","level":"INFO","message":"Download the React DevTools for a better development experience: https://react.dev/link/react-devtools"}
+{"timestamp":"00:00:02.256","source":"Browser","level":"INFO","message":"Download the React DevTools for a better development experience: https://react.dev/link/react-devtools"}

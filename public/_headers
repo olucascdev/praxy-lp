@@ -1,2 +1,5 @@
 /Hero-background.mp4
   Cache-Control: public, max-age=31536000, immutable
+
+/hero-poster.webp
+  Cache-Control: public, max-age=31536000, immutable

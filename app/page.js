@@ -167,7 +167,7 @@ function Hero() {
   }, [open]);
   return (
     <section className={`stage ${open ? "is-open" : ""}`} id="inicio">
-      <div className="plate"><video className="plate-video" autoPlay muted loop playsInline preload="auto" aria-hidden="true"><source src={HERO_VIDEO} type="video/mp4"/></video></div>
+      <div className="plate"><video className="plate-video" autoPlay muted loop playsInline preload="metadata" poster="/hero-poster.webp" aria-hidden="true"><source src={HERO_VIDEO} type="video/mp4"/></video></div>
       <Header open={open} setOpen={setOpen} burgerRef={burgerRef} menuRef={menuRef}/>
       <main className="hero">
         <h1><span>Sua empresa não precisa trabalhar mais.</span><span>Precisa <Accent>operar melhor.</Accent></span></h1>
