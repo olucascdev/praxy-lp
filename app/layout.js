@@ -1,6 +1,8 @@
 import "./styles.css";
+import Script from "next/script";
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.praxy.com.br";
+const googleAnalyticsId = "G-6J5EXYHXQ1";
 
 export const metadata = {
   metadataBase: new URL(siteUrl),
@@ -77,6 +79,18 @@ export default function RootLayout({ children }) {
     <html lang="pt-BR">
       <body>
         <script dangerouslySetInnerHTML={{ __html: scrollResetScript }} />
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${googleAnalyticsId}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${googleAnalyticsId}');
+          `}
+        </Script>
         {children}
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }} />
       </body>
