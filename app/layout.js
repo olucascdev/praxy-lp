@@ -1,7 +1,7 @@
 import "./styles.css";
 import Script from "next/script";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.praxy.com.br";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://praxy.com.br";
 const googleAnalyticsId = "G-6J5EXYHXQ1";
 
 export const metadata = {

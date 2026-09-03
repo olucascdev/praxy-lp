@@ -1,4 +1,4 @@
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.praxy.com.br";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://praxy.com.br";
 
 export default function sitemap() {
   return [
