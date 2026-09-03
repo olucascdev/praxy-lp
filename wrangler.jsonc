@@ -8,7 +8,21 @@
     "directory": ".open-next/assets",
     "binding": "ASSETS"
   },
+  "routes": [
+    {
+      "pattern": "links.praxy.com.br/*",
+      "zone_name": "praxy.com.br"
+    },
+    {
+      "pattern": "praxy.com.br",
+      "zone_name": "praxy.com.br",
+      "custom_domain": true,
+      "enabled": true,
+      "previews_enabled": false
+    }
+  ],
   "observability": {
-    "enabled": true
+    "enabled": true,
+    "redact_query_string": false
   }
 }
